@@ -1,0 +1,11 @@
+<template name="postItem">
+  <view class="post-another">
+    <view class="bar-title"></view>
+    <view class="post-another-content" bindtap="goToDetail" data-postId="{{content_id}}">
+      <text class="post-another-title">{{title}}</text>
+      <text class="post-another-author">文/{{author.user_name}}</text>
+      <image src="{{img_url}}"></image>
+      <text class="post-another-brief">{{forward}} </text>
+    </view>
+  </view>
+</template>

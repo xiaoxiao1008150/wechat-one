@@ -1,0 +1,6 @@
+<view class="image-detail-container">
+    <image src="{{imageData.img_url}}"></image>
+    <text class="image-detail-content">
+    {{imageData.forward}}</text>
+    <text class="image-detail-title">{{imageData.name}} 《{{imageData.title}}》</text>
+</view>

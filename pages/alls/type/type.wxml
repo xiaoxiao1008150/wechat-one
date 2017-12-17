@@ -1,0 +1,17 @@
+  <scroll-view class="grid-container" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower">
+  <view class="type-container">
+       <view wx:for="{{listData}}">
+        <view class="type-content" catchtap="goToDetail" data-id="{{item.id}}">
+            <image src="{{item.img_url}}"></image>
+            <view class="type-content-wrapper">
+                <text class="type-content-title">{{item.title}}</text>
+                <text wx:if="{{musicTag}}" class="type-content-name">{{item.subtitle}}/{{item.name}}</text>
+                <text wx:elif="{{movieTag}}" class="type-content-name">《{{item.subtitle}}》</text>
+                <text wx:else class="type-content-name">文/{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+  </view>
+ 
+  </scroll-view>
+<!-- </view> -->

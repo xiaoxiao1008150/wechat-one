@@ -1,0 +1,24 @@
+.image-detail-container {
+    display: flex;
+    flex-direction: column;
+}
+.image-detail-container image{
+    width: 100%;
+    height: 220px;
+  
+}
+.image-detail-container text{
+    font-size: 12px;
+    color:#999;
+    width:60%;
+    line-height: 25px;
+    text-align: center;
+    /* margin: 0 auto; */
+}
+.image-detail-content{
+    color:#666;
+    margin: 100rpx auto 140rpx;
+}
+.image-detail-title{
+  margin: 0 auto 50rpx;
+}

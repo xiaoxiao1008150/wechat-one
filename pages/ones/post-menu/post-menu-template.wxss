@@ -1,0 +1,14 @@
+.menu-content{
+  display: flex;
+  padding: 20px 0;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+}
+.menu-type{
+
+}
+.icon{
+  margin-right: 10px;
+}

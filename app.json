@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/alls/all",
+    "pages/alls/type/type",
+    "pages/alls/image/image",
+    "pages/alls/type-detail/type-detail",
+    "pages/alls/image-detail/image-detail",
+    "pages/alls/music-detail/music-detail",
+    "pages/ones/one",
+    "pages/ones/post-detail/post-detail",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/animation/animation"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle":"black"
+  },
+   "tabBar": {
+    "borderStyle": "white",
+    "position":"bottom",
+    "list": [
+      {
+        "pagePath": "pages/alls/all",
+        "text": "all"
+      },
+      {
+        "pagePath": "pages/ones/one",
+        "text": "one"
+      }
+    ]
+  }
+}

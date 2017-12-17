@@ -1,0 +1,28 @@
+/* pages/alls/image-detail/image-detail.wxss */
+.grid-container{
+    height: 1300rpx;
+}
+.photo-container{
+  display: flex;
+  padding: 20px;
+  flex-wrap:wrap; 
+  justify-content:space-between;
+}
+.photo-wrapper{
+  width: 49%;
+  box-sizing: border-box;
+  border:1px solid #efefef;
+  margin-bottom: 18px;
+}
+.photo-block{
+  text-align: center;
+  color:#999;
+  font-size:13px;
+}
+.photo-image{
+  height: 100px;
+  width:100%;
+}
+.photo-block text{
+  line-height: 30px;
+}

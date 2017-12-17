@@ -1,0 +1,9 @@
+<template name="postMenu">
+  <view class="menu-content" bindtap="goToDetail" data-postId="{{id}}">
+    <text class="icon">></text>
+    <view class="menu">
+      <text class="menu-type">{{type}}</text>
+      <text class="menu-title">{{title}}</text>
+    </view>
+  </view>
+</template>

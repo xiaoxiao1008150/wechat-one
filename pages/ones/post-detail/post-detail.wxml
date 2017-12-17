@@ -1,0 +1,5 @@
+<view class="post-detail-container">
+  <text class="post-detail-title">{{currentPost.title}}</text>
+  <text class="post-detail-author">文/{{currentPost.name}}</text>
+  <text class="post-detail-content">{{currentPost.content}}</text>
+</view>

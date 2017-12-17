@@ -1,0 +1,62 @@
+<view class="all-container">
+  <swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="false" interval="5000">
+      <swiper-item>
+          <image  src="/image/image.jpeg" ></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="/image/ask.jpeg"></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="/image/reading.jpeg"></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="/image/serialize.jpeg" ></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="/image/music.jpeg" ></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="/image/movie.jpeg" ></image>
+      </swiper-item>
+      <swiper-item>
+          <image src="/image/radio.jpeg"></image>
+      </swiper-item>
+  </swiper>
+  <view class="category">
+    <text class="category-title">分类导航</text>
+    <view class="image-container" catchtap="goToCategory">
+        <view class="image-container-child">
+          <view class="image-pos image-one">
+             <image src="/image/image.jpeg" data-category="image"></image>
+             <text class="image">图文</text>
+          </view>
+         <view class="image-pos image-one">
+           <image  src="/image/ask.jpeg" data-category="ask"></image>
+           <text>问答</text>
+         </view>
+          <view class="image-pos image-two">
+              <image  src="/image/reading.jpeg" data-category="reading"></image>
+              <text>阅读</text>
+          </view>
+        </view>
+        <view class="image-container-child">
+          <view class="image-pos image-one">
+               <image  src="/image/serialize.jpeg" data-category="serialize"></image>
+               <text>连载</text>
+          </view>
+          <view class="image-pos image-one">
+             <image  src="/image/movie.jpeg" data-category="movie"></image>
+            <text>影视</text>
+          </view>
+          <view class="image-pos image-one">
+               <image  src="/image/music.jpeg" data-category="music"></image>
+               <text>音乐</text>
+          </view>
+          <view class="image-pos image-one">
+                  <image  src="/image/radio.jpeg" data-category="radio"></image>
+                  <text>电台</text>
+          </view>
+        </view>
+  </view>
+</view>
+</view>

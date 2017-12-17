@@ -1,0 +1,32 @@
+.post-another{
+  font-size: 13px;
+  color: #666;
+  padding:30rpx;
+}
+.post-another-content{
+  display: flex;
+  flex-direction: column;
+}
+.post-another-content image{
+  height: 350rpx;
+  width: 100%;
+}
+.bar-title{
+  text-align: center;
+}
+.post-another-title{
+  font-size: 14px;
+  color:#000;
+  margin: 25px 0;
+}
+.post-another-author, .post-another-brief{
+  color: #999
+}
+
+.post-another-author{
+  margin-bottom: 13px;
+}
+.post-another-brief{
+  margin: 13px 0 30px 0;
+  line-height: 24px;
+}

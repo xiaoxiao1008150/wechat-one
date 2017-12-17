@@ -1,0 +1,47 @@
+<scroll-view scroll-y style="height:100%">
+<view class="music-wrapper ">
+  <view class="music-detail-container {{needAnimation ?  'lyric' : ''}}">
+      <view class="cover-container">
+                <image class="big-cover" src="{{musicList.cover}}"></image>
+        <image class="little-cover"  src="{{musicList.cover}}"></image>
+        <view class="cover-text">
+            {{musicList.album}} . {{musicList.author}}
+        </view>
+      </view>
+      <view class="music-content-container">
+          <text class="music-content-title">{{musicList.story_title}}</text>
+          <view class="music-detail-exp">
+                     <text class="music-content-author">文/ {{musicList.story_author}}</text>
+                      <icon catchtap="openlyric"  type="success" size="40" color="rgb(0,255,255)"/>
+          </view>
+
+          <text class="music-content">
+          {{musicList.story}}</text>
+      </view>
+  </view>
+  <view class="music-lyric-panel {{needAnimation ?  'lyric' : ''}}"  >
+       <icon  class="close-lyric-icon" catchtap="closelyric" type="success" size="40" color="#000"></icon>
+     <swiper class="lyric-swiper" 
+    indicator-dots="true"  indicator-color="#000" indicator-active-color="#ccc">
+        <swiper-i
+        tem >
+             <scroll-view scroll-y class="lyric-scroll" bindscrolltolower="lower">
+            <view class="lyric-text"><text >{{musicList.lyric}}</text>
+            </view>
+            </scroll-view> 
+        </swiper-item>
+        <swiper-item>
+          <image class="album-image" src="{{musicList.cover}}"></image>
+          <view  class="album-info">
+              <text>所属专辑：{{musicLis.album}}</text>
+              <text>{{musicList.singer}}</text>
+              <text>{{musicList.company}}</text>
+              <text>{{musicList.publish_date}}</text>
+              <text>{{musicList.genre}}</text>
+          </view>
+        </swiper-item>
+    </swiper>  
+  </view>
+</view>
+</scroll-view>
+

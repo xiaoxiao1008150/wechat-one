@@ -1,0 +1,20 @@
+.post-detail-container{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.post-detail-title{
+  font-size: 16px;
+  color:#000;
+  margin: 25px 0;
+}
+.post-detail-author{
+  margin-bottom: 30px;
+  font-size: 12px;
+  color: #999;
+}
+.post-detail-content{
+  font-size: 13px;
+  line-height: 25px;
+  color: #666;
+}
