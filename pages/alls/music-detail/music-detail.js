@@ -1,4 +1,5 @@
 // pages/alls/type-detail/type-detail.js
+const WxParse = require('../../../wxParse/wxParse.js');
 import api from '../../../api/api.js'
 
 Page({
@@ -15,9 +16,11 @@ Page({
    */
   onLoad: function (options) {
     let id = options.id;
+    var that = this;
     api.getMusicDetail({
       success: ((res) =>{
         let list = res.data.data;
+        let story = list.story;
         let info  = list.info && list.info.split(" ");
         let singer = info && info[1];
         let company = info && info[2];
@@ -28,15 +31,17 @@ Page({
           story_title: list.story_title,
           author: list.author.user_name,
           story_author: list.story_author.user_name,
-          story: list.story,
           cover: list.cover,
           lyric: list.lyric,
           album: list.album,
           singer,
           company,
           publish_date,
-          genre
+          genre,
+          story
         }
+
+        WxParse.wxParse('story', 'html', story, that,5);
         this.setData({
           musicList: obj
         })

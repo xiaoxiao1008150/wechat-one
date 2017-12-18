@@ -1,6 +1,7 @@
 // pages/alls/type/type.js
 import api from '../../../api/api.js'
 
+var app = getApp();
 Page({
 
   /**
@@ -79,31 +80,34 @@ Page({
       obj.post_date = item.post_date.substring(0, 10);
       // 针对music list数据处理，需要多一个专辑字段的处理
       if(item.subtitle && this.data.category === 'music') {
-          console.log('test',item.subtitle)
           this.setData({
             musicTag: true
           })
         }
       if(item.subtitle && this.data.category === 'movie'){
-        console.log('kk')
         this.setData({
-          movieTag: true
-      })
-        obj.subtitle = item.subtitle && item.subtitle.substring(3);
+            movieTag: true
+        })
+        // 处理
+        obj.content = item.share_info && item.share_info.content
       }
+      obj.subtitle = item.subtitle && item.subtitle.substring(3);
       tempList.push(obj);
     })
     this.setData({
       listData: this.data.listData.concat(tempList)
     })
     wx.hideNavigationBarLoading();
-    // console.log('rlist===', readingList )
+    // 把 movie 列表放到全局，在movie-detail 中使用
+    app.globalData.movieListData = this.data.listData;
   },
   onScrollLower: function (event) {
     if(this.data.category === 'reading') {
       this.getReadingList()
     }else if(this.data.category === 'music'){
       this.getMusicList()
+    }else if(this.data.category === 'movie'){
+      this.getMovieList()
     }
     wx.showNavigationBarLoading()
   },

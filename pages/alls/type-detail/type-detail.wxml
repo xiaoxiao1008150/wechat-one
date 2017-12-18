@@ -1,5 +1,10 @@
+<import src="../../../wxParse/wxParse.wxml"/>
 <view class="post-detail-container">
   <text class="post-detail-title">{{reading_detail.title}}</text>
   <text class="post-detail-author">文/{{reading_detail.name}}</text>
-  <text class="post-detail-content">{{reading_detail.content}}</text>
+  <!-- <text class="post-detail-content">{{reading_detail.content}}</text> -->
+   <view class="post-detail-content">
+          <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+          <!-- {{musicList.story}} -->
+    </view>
 </view>

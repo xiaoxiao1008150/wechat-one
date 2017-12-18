@@ -1,0 +1,53 @@
+<scroll-view scroll-y style="height:100%">
+  <view class="music-wrapper ">
+    <view class="music-detail-container {{needAnimation ?  'lyric' : ''}}">
+        <view class="cover-container">
+          <view wx:if="{{isSwiper}}">
+            <swiper 
+              indicator-dots="true"
+              autoplay="true" 
+              interval="3000"
+              indicator-active-color="#fff"
+              class="movie-swiper">
+              <block wx:for="{{movieList.photos}}">
+                <swiper-item>
+                  <image src="{{item}}" class="slide-image" width="355" height="150"/>
+                </swiper-item>
+              </block>
+            </swiper>
+          </view>
+          <view wx:else>
+             <image src="{{movieList.photos}}"></image>
+          </view>
+        </view>
+        <view class="music-content-container">
+            <text class="music-content-title">{{movieList.title}}</text>
+            <view class="music-detail-exp">
+                       <text class="music-content-author">文/ {{movieList.name}}</text>
+                        <icon catchtap="openMovieInfo"  type="success" size="40" color="rgb(0,255,255)"/>
+            </view>
+
+            <text class="music-content">
+            {{movieList.content}}</text>
+        </view>
+    </view>
+    <view class="music-lyric-panel {{needAnimation ?  'lyric' : ''}}">
+        <view class="movie">
+           <icon class="close-lyric-icon" bindtap="closeMovieInfo" type="success" size="40" color="#000"></icon>
+            <scroll-view scroll-y="true" class="music-scroll">
+                <image src="{{movieList.poster}}"></image>
+                <view class="movie-info-container">
+                  <text class="movie-info-title">{{movieList.subtitle}}</text>
+                  <view class="movie-introduce">
+                    <text class="movie-exp"></text>
+                    <text>剧情简介</text>
+                    <text class="movie-exp"></text>
+                  </view >
+                  <text class="movie-officialstory">{{movieList.officialstory}}</text>
+                </view>
+            </scroll-view> 
+        </view>
+    </view>
+  </view>
+</scroll-view>
+

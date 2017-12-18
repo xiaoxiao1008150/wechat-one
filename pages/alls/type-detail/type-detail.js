@@ -1,5 +1,6 @@
 // pages/alls/type-detail/type-detail.js
 import api from '../../../api/api.js'
+const WxParse = require('../../../wxParse/wxParse.js');
 
 Page({
 
@@ -14,23 +15,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     let id = options.id;
-    console.log('id', id)
     api.getReadingDetail({
       success: ((res) =>{
         let list = res.data.data;
+        let content = list.hp_content;
         let obj = {
           title: list.hp_title,
           name: list.hp_author,
-          content: list.hp_content
+          content
         }
+        WxParse.wxParse('content', 'html', content, that,5);
         this.setData({
           reading_detail: obj
         })
       }),
       id
     })
-    console.log('test', this.data.reading_detail)
   },
 
   /**

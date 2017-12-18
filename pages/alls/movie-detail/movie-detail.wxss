@@ -1,0 +1,110 @@
+.music-wrapper{
+  width:100%;
+  height:1334rpx;
+}
+.music-wrapper.lyric{
+  overflow: hidden;
+}
+ .music-detail-container.lyric{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+} 
+.cover-container{
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.music-content-title{
+  font-size:19px;
+  color:#000;
+}
+.music-content-author{
+  font-size: 11px;
+  color: #999;
+  margin: 30rpx 0 35rpx 0;
+}
+.music-content{
+  font-size: 13px;
+  color: #666;
+  line-height:24px;
+  letter-spacing:1px;
+}
+
+.music-content-container{
+  display: flex;
+  flex-direction: column;
+  padding: 25px 15px;
+}
+.music-detail-exp{
+  display: flex;
+  justify-content:space-between;
+}
+.music-lyric-panel{
+  position: absolute;
+  width: 100%; 
+  height:100%;  
+  top:0;
+  z-index: 1000;  
+  transform: translateY(100%);  
+  visibility: hidden;    
+  transition:all 0.5s ease;
+  background-color: #fff;
+   text-align: center; 
+  font-size: 13px;
+  line-height: 22px;
+  padding-top: 30px;
+}
+.music-lyric-panel.lyric{
+  visibility: visible;
+  transform: translateY(0);  
+}
+.close-lyric-icon{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.music-scroll{
+   height: calc(100% - 40px); 
+}
+.music-scroll image{
+  width: 100px;
+  height: 150px;
+}
+.movie-swiper image{
+  width: 100%;
+  height: 100%;
+}
+.movie-info-container{
+  
+}
+.movie-info-title{
+  font-size: 18px;
+  color: #000;
+  line-height:60px;
+}
+.movie-introduce{
+  margin: 35px 0;
+}
+.movie-introduce text{
+  font-size: 12px;
+  color: #ccc;
+  padding:0 5px;
+  vertical-align: middle;
+}
+.movie-exp{
+  width: 25px;
+  border-bottom:1px solid #ccc;
+  display:inline-block;
+
+}
+.movie{
+  padding: 0 30px 30px 30px;
+}
+.movie-officialstory{
+  color:#333;
+  line-height:24px;
+  text-align:justify;
+}

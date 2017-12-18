@@ -6,6 +6,7 @@
     "pages/alls/type-detail/type-detail",
     "pages/alls/image-detail/image-detail",
     "pages/alls/music-detail/music-detail",
+    "pages/alls/movie-detail/movie-detail",
     "pages/ones/one",
     "pages/ones/post-detail/post-detail",
     "pages/index/index",

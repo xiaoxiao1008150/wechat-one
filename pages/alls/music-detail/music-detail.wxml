@@ -1,8 +1,9 @@
+<import src="../../../wxParse/wxParse.wxml"/>
 <scroll-view scroll-y style="height:100%">
 <view class="music-wrapper ">
   <view class="music-detail-container {{needAnimation ?  'lyric' : ''}}">
       <view class="cover-container">
-                <image class="big-cover" src="{{musicList.cover}}"></image>
+        <image class="big-cover" src="{{musicList.cover}}"></image>
         <image class="little-cover"  src="{{musicList.cover}}"></image>
         <view class="cover-text">
             {{musicList.album}} . {{musicList.author}}
@@ -15,16 +16,17 @@
                       <icon catchtap="openlyric"  type="success" size="40" color="rgb(0,255,255)"/>
           </view>
 
-          <text class="music-content">
-          {{musicList.story}}</text>
+          <view class="music-content">
+              <template is="wxParse" data="{{wxParseData:story.nodes}}"/>
+          <!-- {{musicList.story}} -->
+          </view>
       </view>
   </view>
   <view class="music-lyric-panel {{needAnimation ?  'lyric' : ''}}"  >
        <icon  class="close-lyric-icon" catchtap="closelyric" type="success" size="40" color="#000"></icon>
      <swiper class="lyric-swiper" 
     indicator-dots="true"  indicator-color="#000" indicator-active-color="#ccc">
-        <swiper-i
-        tem >
+        <swiper-item >
              <scroll-view scroll-y class="lyric-scroll" bindscrolltolower="lower">
             <view class="lyric-text"><text >{{musicList.lyric}}</text>
             </view>

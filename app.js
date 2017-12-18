@@ -36,6 +36,7 @@ App({
   globalData: {
     userInfo: null,
     postDetailData: [],
-    imageListData:[]
+    imageListData:[],
+    movieListData:[],
   }
 })
