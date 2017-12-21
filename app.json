@@ -1,9 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/me/user/user",
-    "pages/me/me",  
+    "pages/ones/one",
     "pages/alls/all",
+    "pages/me/me",  
+    "pages/me/user/user",
     "pages/me/reading-collect/reading-collect",
     "pages/alls/type/type",
     "pages/alls/image/image",
@@ -11,7 +12,6 @@
     "pages/alls/image-detail/image-detail",
     "pages/alls/music-detail/music-detail",
     "pages/alls/movie-detail/movie-detail",
-    "pages/ones/one",
     "pages/ones/post-detail/post-detail",
     "pages/logs/logs",
     "pages/animation/animation"
@@ -27,8 +27,8 @@
     "selectedColor":"black",
     "list": [
       {
-        "pagePath": "pages/me/me",
-        "text": "me",
+        "pagePath": "pages/ones/one",
+        "text": "one",
         "iconPath": "image/icon/one.png",
         "selectedIconPath": "image/icon/one.png"
       },
@@ -39,8 +39,8 @@
         "selectedIconPath": "image/icon/all.png"
       },
       {
-        "pagePath": "pages/ones/one",
-        "text": "one",
+        "pagePath": "pages/me/me",
+        "text": "me",
         "iconPath": "image/icon/user.png",
         "selectedIconPath": "image/icon/user.png"
       }

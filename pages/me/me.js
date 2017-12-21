@@ -25,13 +25,21 @@ Page({
     })
     // wx.clearStorage()
   },
-  readingCollect () {
-    // let collectList = wx.getStorageSync('reading_collected');
-    this.setnavigateTo('reading-collect')
+  collectList (event) {
+    let category = event.currentTarget.dataset.category;
+    this.setnavigateTo(category);
+    console.log('test', category)
   },
-  setnavigateTo(type){
+  setnavigateTo(category){
+    let type;
+    if(category !== 'user') {
+      type = 'reading-collect'
+    }else {
+      type = 'user'
+    }
+
     wx.navigateTo({
-      url: `${type}/${type}`
+      url: `${type}/${type}?category=${category}`
     })
   },
   goToUserPage () {

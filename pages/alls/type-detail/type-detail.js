@@ -83,7 +83,7 @@ Page({
     }
   },
   handleHasCollected (id) {
-     let collectList =  wx.getStorageSync('reading_collected' );
+     let collectList =  wx.getStorageSync('reading_collected') || [];
      let filterArray = collectList.filter((item) =>{
         return item.id === id;
      });

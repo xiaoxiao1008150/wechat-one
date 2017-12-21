@@ -10,13 +10,17 @@ Page({
   data: {
     musicList:{},
     needAnimation: false,
-    needShow: false
+    needShow: false,
+    musicCollected: {},
+    hasCollected: false,
+    hasShare: false
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     let id = options.id;
+    this.data.musicCollected.id = id;
     var that = this;
     api.getMusicDetail({
       success: ((res) =>{
@@ -41,14 +45,15 @@ Page({
           genre,
           story
         }
-
+        this.data.musicCollected.title = list.title;
         WxParse.wxParse('story', 'html', story, that,5);
         this.setData({
           musicList: obj
         })
       }),
       id
-    })
+    });
+    this.handleHasCollected(id)
   },
   openlyric (){
     var that = this;
@@ -71,6 +76,37 @@ Page({
     //     needAnimation: false
     //   })
     // },20)
+  },
+  collect () {
+    let hasCollected = this.data.hasCollected;
+    if(hasCollected){
+      wx.showToast({
+        title: '音乐已经收藏'
+      })
+    }else{
+      wx.showToast({
+        title: '收藏成功'
+      })
+      let collectList = wx.getStorageSync('music_collected') || [];
+      let newObj = this.data.musicCollected;
+        collectList.push(newObj);
+        wx.setStorageSync('music_collected', collectList );
+        this.setData({
+           hasCollected: true
+        })
+    }
+  },
+  handleHasCollected (id) {
+     let collectList =  wx.getStorageSync('music_collected' ) || [];
+     let filterArray = collectList.filter((item) =>{
+        return item.id === id;
+     });
+     let hasCollected = filterArray.length;
+     if(hasCollected){
+        this.setData({
+          hasCollected: true
+        })
+     }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -115,7 +151,34 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function (res) {
+    var that = this;
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log('button', res.target)
+    }
+    return {
+      // title: '自定义转发标题',
+      // path: '/pages/alls/type-detail/type-detail',
+      success: function(res) {
+        // 转发成功
+        wx.showToast({
+          title: '转发成功',
+          icon: 'success',
+          duration: 1000
+        });
+        that.setData({
+           hasShare: true
+        })
+      },
+      fail: function(res) {
+        // 转发失败
+        wx.showToast({
+          title: '转发失败',
+          icon: 'fail',
+          duration: 1000
+        })
+      }
+    }
   }
 })

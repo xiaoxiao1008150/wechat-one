@@ -21,7 +21,7 @@ Page({
     })
   },
   goToCategory (event) {
-    var category = event.target.dataset.category;
+    let category = event.target.dataset.category;
     if (category === 'image') {
       wx.navigateTo({
         url: "image/image"

@@ -12,12 +12,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let category = options.category;
+    let text;
+    if(category === 'reading') {
+      text = '文章'
+    }else if(category === 'music') {
+      text = '音乐'
+    }
     wx.setNavigationBarTitle({
-      title: '文章收藏'
+      title: text + '收藏'
     })
-    let collectList = wx.getStorageSync('reading_collected');
+    let key = category + '_collected';
+    let collectList = wx.getStorageSync(key);
     this.setData({
-      collectList: collectList
+      collectList
     })
   },
   gotoDetail (event) {
@@ -25,8 +33,9 @@ Page({
     this.setnavigateTo(id);
   },
   setnavigateTo(id){
+    let category = this.data.category;
     wx.navigateTo({
-      url: "/pages/alls/type-detail/type-detail?id=" + id
+      url: `/pages/alls/${category}-detail/${category}-detail?id=${id}`
     })
   },
   // 转到文章详情页面

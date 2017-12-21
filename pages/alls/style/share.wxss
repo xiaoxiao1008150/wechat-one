@@ -1,0 +1,27 @@
+.share-container{
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  line-height: 50px;
+  background:#eee;
+  width:100%;
+  display: flex;
+  text-align: center;
+}
+.share-icon-item{
+  flex: 1;
+  color: #ccc;
+  font-size: 24px;
+}
+.share-icon-item button:after{
+  border: none;
+}
+.share-icon-item  .iconfont{
+  color: #707070;
+}
+.share-icon-item  .iconfont.collected{
+  color: #ccc;
+}
+.share-icon-item  .iconfont.share{
+  color: #ccc;
+}

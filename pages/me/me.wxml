@@ -10,17 +10,17 @@
     </view>
     <view class="me-collect exp">
                 <view class="me-collect-title" ><text >我的收藏</text></view>
-                <view class="collect-item-container" catchtap='readingCollect'>
+                <view class="collect-item-container">
         <view class="me-collect-item">
             <i class="iconfont icon-tuwen"></i>
             <text class="">图文</text>
         </view>
         <view class="me-collect-item" 
-        catchtap='readingCollect'>
+        catchtap='collectList' data-category="reading">
             <i class=" iconfont icon-wenzhang"></i>
             <text class="">文章</text>
         </view>
-        <view class="me-collect-item" catchtap='readingCollect'>
+        <view class="me-collect-item" catchtap='collectList' data-category="music">
             <i class="icon iconfont icon-yinyue"></i>
             <text class="">音乐</text>
         </view>

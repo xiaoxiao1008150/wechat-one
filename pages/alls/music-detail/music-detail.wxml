@@ -48,5 +48,15 @@
     </swiper>  
   </view>
 </view>
+<view class="share-container">
+    <view class="share-icon-item" ><button catchtap="collect"> <i class="iconfont icon-shoucang1"></i></button>  
+</view>
+    <view class="share-icon-item"> 
+    <button catchtap="collect"><i class="iconfont icon-shoucang {{hasCollected ?  'collected' : ''}} "></i></button>           
+</view>
+    <view class="share-icon-item">   
+    <button open-type="share"><i class="iconfont icon-fenxiang {{hasShare ?  'share' : ''}}"></i></button>         
+</view>
+</view>
 
 

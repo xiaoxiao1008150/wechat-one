@@ -117,7 +117,6 @@ Page({
   },
   // 监听下拉刷新
   onPullDownRefresh: function (event) {
-    console.log('下拉刷新')
     wx.showNavigationBarLoading();
   },
   setnavigateTo(type,id){
@@ -136,7 +135,6 @@ Page({
     }
   },
   bindDateChange:function(e){
-    console.log('e', e)
     this.setData({
       date:e.detail.value
     })

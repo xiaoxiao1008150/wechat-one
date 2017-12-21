@@ -24,14 +24,11 @@ Page({
   onLoad: function (options) {
     api.getById({
       success: (res) => {
-        console.log('id', res)
         let g_api = res.data.data.shift();
         app.globalData.g_api = g_api;
-        // console.log('data', g_api)
         this.getOneTagList({
           success: ((res) => {
-            // console.log('list', res)
-            // 注意: 这里必须用setData的形式，直接复制的形式不能是页面渲染
+            // 注意: 这里必须用setData的形式，直接复制的形式不能页面渲染
             let list = res.data.data.content_list
             this.setData({
               list_array_first: list[0],
@@ -45,7 +42,8 @@ Page({
             this.handlePostDetail(list)
             // 处理数据 文章详情的数据
 
-          })
+          }),
+          keyDate: g_api
         })
       }
     })
