@@ -1,0 +1,9 @@
+<view class="reading-collect">
+    <view class="reading-collect-item" 
+    wx:for="{{collectList}}"
+    catchtap="gotoDetail">
+        <text class="reading-collect-title" data-id="{{item.id}}">
+        {{item.title}}
+        </text>
+    </view>
+</view>

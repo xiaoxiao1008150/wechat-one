@@ -1,5 +1,5 @@
 <view class="all-container">
-  <swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="false" interval="5000">
+  <swiper catchtap="onSwiperTap" indicator-dots="true" autoplay="false" interval="5000" indicator-active-color="#fff">
       <swiper-item>
           <image  src="/image/image.jpeg" ></image>
       </swiper-item>

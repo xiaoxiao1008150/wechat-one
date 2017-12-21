@@ -9,7 +9,8 @@ Page({
    */
   data: {
     musicList:{},
-    needAnimation: false
+    needAnimation: false,
+    needShow: false
   },
   /**
    * 生命周期函数--监听页面加载
@@ -48,17 +49,28 @@ Page({
       }),
       id
     })
-    console.log('test', this.data.reading_detail)
   },
   openlyric (){
+    var that = this;
     this.setData({
-      needAnimation: true
+      needShow: true
     })
+    setTimeout(()=>{
+      that.setData({
+        needAnimation: true
+      })
+    },20)
   },
   closelyric () {
+    // var that = this;
     this.setData({
       needAnimation: false
     })
+    // setTimeout(()=>{
+    //   that.setData({
+    //     needAnimation: false
+    //   })
+    // },20)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

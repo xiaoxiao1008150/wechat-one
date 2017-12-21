@@ -2,9 +2,41 @@
 <view class="post-detail-container">
   <text class="post-detail-title">{{reading_detail.title}}</text>
   <text class="post-detail-author">文/{{reading_detail.name}}</text>
-  <!-- <text class="post-detail-content">{{reading_detail.content}}</text> -->
    <view class="post-detail-content">
           <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
-          <!-- {{musicList.story}} -->
     </view>
+</view>
+<view class="comment-container">
+    <view class="another-author">
+        <text class="comment-help-text"></text>
+        <view class="comment-help">作者</view>
+        <view class="author-another">
+            <image src="{{reading_detail.avatar}}"></image>
+            <text>{{reading_detail.name}}</text>
+        </view>
+    </view>
+    <view class="comment-list">
+        <text class="comment-help-text">评论列表</text>
+        <view class="comment-help"></view>
+        <view  class="comment-item" wx:for="{{commentList}}">
+              <view  class="comment-people">
+                <image src="{{item.user.web_url}}"></image>
+                <text class="comment-name">{{item.user.user_name}}</text>
+                <text class="comment-time">{{item.created_at}}</text>
+              </view>
+            <view class="comment-text">
+            <text>{{item.content}}</text>
+           </view>
+        </view>
+    </view>
+</view>
+<view class="share-container">
+    <view class="share-icon-item" ><button catchtap="collect"> <i class="iconfont icon-shoucang1"></i></button>  
+</view>
+    <view class="share-icon-item"> 
+    <button catchtap="collect"><i class="iconfont icon-shoucang {{hasCollected ?  'collected' : ''}} "></i></button>           
+</view>
+    <view class="share-icon-item">   
+    <button open-type="share"><i class="iconfont icon-fenxiang {{hasShare ?  'share' : ''}}"></i></button>         
+</view>
 </view>

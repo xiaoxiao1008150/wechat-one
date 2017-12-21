@@ -1,0 +1,45 @@
+<!-- <view catchtap='readingCollect'>fdfdfsfdsd</view> -->
+<view class="me-container">
+    <view class="me-avatar-container exp">
+        <image src="/image/image.jpeg" class="big-cover"></image>
+        <view class="middle-cover">
+            <image class="circle-image" src="{{avatarUrl}}" catchtap="goToUserPage"></image>
+            <text class="me-name">{{nickName}}</text>
+            <image class="square-image" src="/image/music.jpeg"></image>
+        </view>
+    </view>
+    <view class="me-collect exp">
+                <view class="me-collect-title" ><text >我的收藏</text></view>
+                <view class="collect-item-container" catchtap='readingCollect'>
+        <view class="me-collect-item">
+            <i class="iconfont icon-tuwen"></i>
+            <text class="">图文</text>
+        </view>
+        <view class="me-collect-item" 
+        catchtap='readingCollect'>
+            <i class=" iconfont icon-wenzhang"></i>
+            <text class="">文章</text>
+        </view>
+        <view class="me-collect-item" catchtap='readingCollect'>
+            <i class="icon iconfont icon-yinyue"></i>
+            <text class="">音乐</text>
+        </view>
+        <view class="me-collect-item">
+           <i class="icon iconfont icon-weibiaoti2zhuanhuan"></i>
+            <text class="">影视</text>
+        </view>
+        <view class="me-collect-item">
+          <i class="icon iconfont icon-diantai"></i>
+          <text class="">电台</text>
+        </view>
+      </view>
+      </view>
+      <view class="me-interest exp">
+          <i class="icon iconfont icon-wo1"></i>
+          <text>我的关注</text>
+          <view class="interest-num">
+            <text class="interest-num-zero">0</text>
+            <text>></text>
+          </view>
+      </view>
+</view>

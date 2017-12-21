@@ -1,0 +1,14 @@
+<view class="user">
+     <text class="info">基本资料</text>
+     <view class="user-avatar user-item">
+          <text>头像</text>
+          <image src="{{avatarUrl}}" catchtap="openPhoto"></image>
+     </view>
+     <view class="user-name user-item">
+        <view class="info-text">
+          <text>昵称</text>
+          <text>{{nickName}}</text>
+        </view>
+          <text>修改</text>
+     </view>
+</view>

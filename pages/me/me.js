@@ -1,40 +1,43 @@
-// pages/alls/image-detail/image-detail.js
-
-var app = getApp();
+// pages/me/me.js
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imageData: {}
+    avatarUrl: null,
+    nickName: null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      let id = options.id;
-      let list = app.globalData.imageListData;
 
-      let image = list.filter((item) =>{
-        return item.id === id;
-      });
-      let postDate = image[0].post_date;
-      //设置topBar是阅读
-      wx.setNavigationBarTitle({
-        title: postDate
-      })
-      this.setData({
-        imageData: image && image.length > 0 && image.shift()
-      })
+    let {avatarUrl, nickName} = wx.getStorageSync('userInfo')
+    this.setData({
+      avatarUrl,
+      nickName
+    })
+     wx.setNavigationBarTitle({
+      title: '用户名'
+    })
+    // wx.clearStorage()
   },
-   /*查看图片*/
-  viewMoviePostImg: function (e) {
-    var src = e.currentTarget.dataset.src;
-    wx.previewImage({
-      current: src, // 当前显示图片的http链接
-      urls: [src] // 需要预览的图片http链接列表
+  readingCollect () {
+    // let collectList = wx.getStorageSync('reading_collected');
+    this.setnavigateTo('reading-collect')
+  },
+  setnavigateTo(type){
+    wx.navigateTo({
+      url: `${type}/${type}`
+    })
+  },
+  goToUserPage () {
+    this.setnavigateTo('user')
+    wx.setNavigationBarTitle({
+      title: '个人设置'
     })
   },
 

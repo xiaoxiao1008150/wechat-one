@@ -32,7 +32,7 @@ const wxRequest = (params, url) => {
 // 获取one标签列表
 const getById = (params) => wxRequest(params, getUrl('api/onelist/idlist/'))
 // 4625 这个数字要根据每天变化，后期修改
-const getOneTagList = (params) => wxRequest(params, getUrl('api/onelist/4599/0'))
+const getOneTagList = (params) => wxRequest(params, getUrl('api/onelist/4623/0'))
 // 获取阅读列表
 const getReadingList = (params) => wxRequest(params, 'http://v3.wufazhuce.com:8000/api/channel/reading/more/' + params.id || 0)
 // 获取阅读文章的详情
@@ -45,6 +45,11 @@ const getMusicDetail = (params) => wxRequest(params, 'http://v3.wufazhuce.com:80
 const getMovieList = (params) => wxRequest(params, 'http://v3.wufazhuce.com:8000/api/channel/movie/more/' +  params.id || 0)
 // 获取影视详情
 const getMovieDetail = (params) => wxRequest(params, 'http://v3.wufazhuce.com:8000/api/movie/detail/' + params.id )
+// 获取 莫类型的 评论
+const getComment = (params) => wxRequest(params, 'http://v3.wufazhuce.com:8000/api/comment/praiseandtime/'+ params.channel +'/'+params.id + '/' + params.lastId || 0 )
+// 按日期mm-dd-hhhh获取essay
+const getEssayByDate = (params) => wxRequest(params, 'http://v3.wufazhuce.com:8000/api/essay/bymonth/' + params.date )
+
 
 
 
@@ -57,7 +62,9 @@ module.exports = {
   getMusicList,
   getMusicDetail,
   getMovieList,
-  getMovieDetail
+  getMovieDetail,
+  getComment,
+  getEssayByDate
 }
 
 

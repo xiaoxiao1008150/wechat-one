@@ -24,7 +24,7 @@ Page({
   onLoad: function (options) {
     api.getById({
       success: (res) => {
-        // console.log('id', res)
+        console.log('id', res)
         let g_api = res.data.data.shift();
         app.globalData.g_api = g_api;
         // console.log('data', g_api)
@@ -118,6 +118,14 @@ Page({
     console.log('id', postId)
     wx.navigateTo({
       url: "post-detail/post-detail?id=" + postId
+    })
+  },
+  /*查看图片*/
+  viewMoviePostImg: function (e) {
+    var src = e.currentTarget.dataset.src;
+    wx.previewImage({
+      current: src, // 当前显示图片的http链接
+      urls: [src] // 需要预览的图片http链接列表
     })
   },
   /**

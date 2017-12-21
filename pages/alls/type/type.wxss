@@ -1,4 +1,13 @@
 /* pages/alls/type/type.wxss */
+.section{
+  display:block;
+  background:rgba(0,0,0,0.04);
+  color:rgba(0,0,0,0.4);
+  font-size:13px;
+  text-align:center;
+  height:30px;
+  line-height:30px;
+}
 .grid-container{
     height: 1200rpx;
     /* padding:20px 0 100px 6rpx;   */

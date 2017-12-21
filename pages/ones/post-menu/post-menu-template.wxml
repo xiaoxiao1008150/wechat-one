@@ -3,7 +3,7 @@
     <text class="icon">></text>
     <view class="menu">
       <text class="menu-type">{{type}}</text>
-      <text class="menu-title">{{title}}</text>
+      <text class="menu-little-title">{{title}}</text>
     </view>
   </view>
 </template>

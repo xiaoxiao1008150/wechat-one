@@ -1,7 +1,10 @@
 // pages/alls/type/type.js
 import api from '../../../api/api.js'
 
+import util from '../../../utils/util.js'
+
 var app = getApp();
+var date = util.formatTime(new Date());
 Page({
 
   /**
@@ -11,7 +14,8 @@ Page({
     listData:[],
     needId: true,
     musicTag:false,
-    movieTag: false
+    movieTag: false,
+    date: date
   },
 
   /**
@@ -130,6 +134,12 @@ Page({
     }else if(this.data.category === 'movie'){
       this.setnavigateTo('movie-detail', id)
     }
+  },
+  bindDateChange:function(e){
+    console.log('e', e)
+    this.setData({
+      date:e.detail.value
+    })
   },
 
   onReady: function () {

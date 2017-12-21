@@ -2,7 +2,7 @@
 <import src="post-menu/post-menu-template.wxml" />
 <view class="container">
     <view class="post-first-container post-container">
-        <image src="{{list_array_first.img_url}}"></image>
+        <image src="{{list_array_first.img_url}}" data-src="{{list_array_first.img_url}}" catchtap="viewMoviePostImg"></image>
         <text class="post-first-author ">{{list_array_first.title}} | {{ list_array_first.pic_info }}</text>
         <text class="post-first-forward">{{list_array_first.forward}}</text>
         <text class="post-first-author exp">{{list_array_first.words_info}}</text>

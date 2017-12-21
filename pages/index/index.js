@@ -22,9 +22,10 @@ Page({
     });
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
+    let userInfo = wx.getStorageSync('userInfo')
+    if (userInfo) {
       this.setData({
-        userInfo: app.globalData.userInfo,
+        userInfo,
         hasUserInfo: true
       })
     } else if (this.data.canIUse){
@@ -40,9 +41,11 @@ Page({
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
-          app.globalData.userInfo = res.userInfo
+          console.log('res', res)
+          // app.globalData.userInfo = res.userInfo
+          wx.setStorageSync('userInfo', res.detail.userInfo)
           this.setData({
-            userInfo: res.userInfo,
+            userInfo: res.detail.userInfo,
             hasUserInfo: true
           })
         }
@@ -51,7 +54,8 @@ Page({
   },
   getUserInfo: function(e) {
     console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+    // app.globalData.userInfo = e.detail.userInfo
+    wx.setStorageSync('userInfo', e.detail.userInfo)
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true

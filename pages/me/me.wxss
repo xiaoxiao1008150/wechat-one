@@ -1,0 +1,95 @@
+.me-container{
+  background: rgba(0,0,0,0.05);
+}
+.me-container .exp{
+  margin-bottom: 8px;
+}
+.me-avatar-container{
+  /* position: relative; */
+}
+.big-cover{
+   height: 270px; 
+}
+.middle-cover{
+  position: absolute;
+   width: 100%; 
+  /* height: 100%; */
+  /* margin: 0 auto; */
+  top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+   align-items: center; 
+}
+.circle-image{
+  width:50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid #fff;
+}
+.me-name{
+  font-size: 12px;
+  color: #fff;
+  margin: 15px 0 40px;
+}
+.square-image{
+  width: 100px;
+  height: 90px;
+}
+.me-collect{
+  padding: 10px 0 20px 20px; 
+  color:#999;
+  font-size:12px;
+  background: #fff;
+}
+.collect-item-container{
+  display: flex;
+  padding: 0 30px 0 10px ; 
+  height: 60px;
+}
+.me-collect-item{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.me-collect-item i{
+    font-size: 30px;
+}
+/* .me-collect-item .icon{
+      font-size: 25px;
+} */
+
+.me-collect-title{
+  font-size: 13px;
+  margin-bottom: 10px;
+  color:#333;
+}
+ .me-collect-item text{
+     margin-top: 10px; 
+} 
+.me-interest{
+   padding: 0 20px; 
+  height: 50px;
+  line-height: 50px;
+  color: #999;
+  font-size: 13px;
+  background: #fff;
+}
+.me-interest i{
+  margin-right:10px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+.me-interest text{
+  vertical-align: middle;
+}
+.interest-num{
+  float: right;
+}
+.interest-num text{
+  vertical-align: middle;
+}
+.interest-num-zero{
+  margin-right: 8px;
+}

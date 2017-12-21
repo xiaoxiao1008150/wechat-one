@@ -1,0 +1,12 @@
+.reading-collect-item{
+   font-size: 12px;
+   color: #515151;
+   border-bottom: 1px solid #dbdbdb;
+   padding:0 20px;
+  height:40px;
+  line-height:14px;
+}
+.reading-collect-title{
+  display:block;
+  height:100%;
+}

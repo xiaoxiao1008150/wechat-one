@@ -27,7 +27,7 @@
   color: #666;
 }
 .post-first-author{ 
-  margin: 10rpx 0 30rpx;
+  margin: 10px 0 30px;
 }
 .post-first-author.exp{
   margin: 30rpx 0 40rpx 0 

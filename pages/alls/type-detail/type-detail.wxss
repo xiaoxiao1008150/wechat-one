@@ -18,3 +18,92 @@
   line-height: 25px;
   color: #666;
 }
+.comment-help-text{
+    font-size: 13px;
+    color: #333;
+    line-height: 50px;
+}
+.comment-help{
+  width: 55px;
+  border-bottom:5px solid #000;
+  margin-bottom: 24px;
+}
+.author-another{
+  display: flex;
+}
+.author-another image{
+   width: 40px;
+   height: 40px;
+   border-radius: 100%;
+   border:1px solid #efefef;
+   margin-right: 15px;
+}
+.author-another text{
+    font-size:11px;
+    color:#333;
+}
+.comment-list{
+  padding: 20px;
+  /* margin-top: 30px; */
+}
+.comment-item{
+  border-bottom: 1px solid #efefef; 
+  padding-bottom: 15px;
+}
+.comment-people{
+  line-height: 30px;
+  color: #999;
+  font-size: 12px;
+  
+}
+.comment-people image{
+    width: 20px;
+   height: 20px;
+   border-radius: 100%;
+   margin-right: 15px;
+   vertical-align: middle;
+}
+.comment-name{
+   vertical-align: middle;
+    color: rgba(0,0,0,0.4)
+}
+.comment-time{
+    float: right;
+    vertical-align: middle;
+    color: rgba(0,0,0,0.4)
+}
+.comment-text{
+  font-size: 11px;
+  color:#333;
+  line-height: 20px;
+}
+.another-author{
+   padding: 20px 20px 10px; 
+}
+.share-container{
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  line-height: 50px;
+  background:#eee;
+  width:100%;
+  display: flex;
+  text-align: center;
+}
+.share-icon-item{
+  flex: 1;
+  color: #ccc;
+  font-size: 24px;
+}
+.share-icon-item button:after{
+  border: none;
+}
+.share-icon-item  .iconfont{
+  color: #707070;
+}
+.share-icon-item  .iconfont.collected{
+  color: #ccc;
+}
+.share-icon-item  .iconfont.share{
+  color: #ccc;
+}

@@ -1,6 +1,10 @@
 {
   "pages":[
+    "pages/index/index",
+    "pages/me/user/user",
+    "pages/me/me",  
     "pages/alls/all",
+    "pages/me/reading-collect/reading-collect",
     "pages/alls/type/type",
     "pages/alls/image/image",
     "pages/alls/type-detail/type-detail",
@@ -9,7 +13,6 @@
     "pages/alls/movie-detail/movie-detail",
     "pages/ones/one",
     "pages/ones/post-detail/post-detail",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/animation/animation"
   ],
@@ -21,14 +24,25 @@
    "tabBar": {
     "borderStyle": "white",
     "position":"bottom",
+    "selectedColor":"black",
     "list": [
       {
+        "pagePath": "pages/me/me",
+        "text": "me",
+        "iconPath": "image/icon/one.png",
+        "selectedIconPath": "image/icon/one.png"
+      },
+      {
         "pagePath": "pages/alls/all",
-        "text": "all"
+        "text": "all",
+        "iconPath": "image/icon/all.png",
+        "selectedIconPath": "image/icon/all.png"
       },
       {
         "pagePath": "pages/ones/one",
-        "text": "one"
+        "text": "one",
+        "iconPath": "image/icon/user.png",
+        "selectedIconPath": "image/icon/user.png"
       }
     ]
   }
