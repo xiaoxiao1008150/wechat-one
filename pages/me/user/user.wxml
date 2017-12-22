@@ -7,8 +7,19 @@
      <view class="user-name user-item">
         <view class="info-text">
           <text>昵称</text>
-          <text>{{nickName}}</text>
+          <text class="user-nickname">{{nickName}}</text>
         </view>
-          <text>修改</text>
+          <!-- <image src="../../../image/icon/edit.png"></image> -->
+          <image src="/image/icon/edit.png" catchtap="editNickName"></image>
      </view>
+</view>
+<view wx:if="{{editNickName}}" class="edit-nickname">
+  <view class="mark" catchtap="editCancel"></view>
+  <view class="edit-containter" animation="{{animationData}}">
+    <view class="input-container">
+      <input placeholder="" value="{{nickName}}" focus="{{focus}}" bindconfirm="save" bindinput="bindKeyInput"/>
+      <icon  catchtap="resetValue" type="cancel" size="20" color="{{color}}"/>
+    </view>
+    <button bindtap="save">保存</button>
+  </view>
 </view>

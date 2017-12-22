@@ -138,6 +138,10 @@ Page({
     this.setData({
       date:e.detail.value
     })
+    this.setData({
+      listData: []
+    })
+   this.getReadingList();
   },
 
   onReady: function () {

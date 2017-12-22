@@ -6,7 +6,6 @@ Page({
   },
   onLoad: function (option) {
       let postId = option.id
-      console.log('postId', postId)
       let postDetailList = app.globalData.postDetailData
       console.log('postDetailList', postDetailList)
 

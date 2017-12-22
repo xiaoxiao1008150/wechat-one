@@ -8,7 +8,8 @@
   /* position: relative; */
 }
 .big-cover{
-   height: 270px; 
+   height: 270px;
+   -webkit-filter:blur(20px);
 }
 .middle-cover{
   position: absolute;

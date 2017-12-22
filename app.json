@@ -2,19 +2,16 @@
   "pages":[
     "pages/index/index",
     "pages/ones/one",
+    "pages/me/me",
     "pages/alls/all",
-    "pages/me/me",  
     "pages/me/user/user",
-    "pages/me/reading-collect/reading-collect",
     "pages/alls/type/type",
     "pages/alls/image/image",
     "pages/alls/type-detail/type-detail",
     "pages/alls/image-detail/image-detail",
     "pages/alls/music-detail/music-detail",
     "pages/alls/movie-detail/movie-detail",
-    "pages/ones/post-detail/post-detail",
-    "pages/logs/logs",
-    "pages/animation/animation"
+    "pages/ones/post-detail/post-detail"
   ],
   "window":{
     "backgroundTextStyle":"light",

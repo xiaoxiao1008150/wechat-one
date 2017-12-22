@@ -6,7 +6,11 @@ Page({
    */
   data: {
     avatarUrl: null,
-    nickName: null
+    nickName: null,
+    editNickName: false,
+    focus: true,
+    color: '#ccc',
+    helpNickName: null
   },
 
   /**
@@ -40,6 +44,81 @@ Page({
 
       }
     })
+  },
+  editNickName () {
+    this.setData({
+      editNickName: true
+    })
+    var animation = wx.createAnimation({
+      duration: 500,
+        timingFunction: 'ease',
+    })
+    this.animation = animation
+    animation.translateY(0).step()
+    this.setData({
+      animationData:animation.export()
+    })
+  },
+  editCancel () {
+    var that = this;
+    var animation = wx.createAnimation({
+      duration: 500,
+        timingFunction: 'ease',
+    })
+    this.animation = animation
+    animation.translateY(-140).step()
+    this.setData({
+      animationData:animation.export()
+    });
+    setTimeout(() =>{
+      that.setData({
+        editNickName: false
+      })
+    },400)
+  },
+  resetValue () {
+    this.data.oldNickName = this.data.nickName;
+    this.setData({
+      nickName: null,
+      focus: true
+    })
+  },
+  // 实时获取input的值
+  bindKeyInput (e) {
+    this.setData({
+      helpNickName: e.detail.value
+    })
+  },
+  save (e) {
+    // 更改名称到缓存
+    // 是点击按钮进行保存的
+    let newNickName;
+    if(e.type === 'tap') {
+      // this.setData({
+      //   nickName: this.data.helpNickName
+      // });
+      console.log('new', this.data.helpNickName)
+      newNickName = this.data.helpNickName;
+    }else{
+      newNickName = e.detail.value;
+    }
+    if(!newNickName){// 如果编辑姓名为空，不修改原名称
+        console.log('执行')
+        console.log('oldNickName', this.data.oldNickName)
+        this.setData({
+          nickName: this.data.oldNickName
+        });
+        this.editCancel();
+        return
+      }else{
+        let userInfo = wx.getStorageSync('userInfo')
+        userInfo.nickName = newNickName;
+        wx.setStorageSync('userInfo', userInfo);
+        this.setData({
+          nickName: newNickName,
+        });
+      }
+      this.editCancel();
   },
 
   /**
