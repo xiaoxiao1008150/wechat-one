@@ -37,7 +37,6 @@ Page({
     }else {
       type = 'user'
     }
-
     wx.navigateTo({
       url: `${type}/${type}?category=${category}`
     })

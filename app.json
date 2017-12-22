@@ -5,6 +5,7 @@
     "pages/me/me",
     "pages/alls/all",
     "pages/me/user/user",
+    "pages/me/reading-collect/reading-collect",
     "pages/alls/type/type",
     "pages/alls/image/image",
     "pages/alls/type-detail/type-detail",

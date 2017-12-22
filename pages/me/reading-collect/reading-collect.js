@@ -13,6 +13,7 @@ Page({
    */
   onLoad: function (options) {
     let category = options.category;
+    this.data.category = category;
     let text;
     if(category === 'reading') {
       text = '文章'
@@ -34,6 +35,9 @@ Page({
   },
   setnavigateTo(id){
     let category = this.data.category;
+    if(category === 'reading') {
+      category = 'type'
+    }
     wx.navigateTo({
       url: `/pages/alls/${category}-detail/${category}-detail?id=${id}`
     })

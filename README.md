@@ -16,7 +16,10 @@ git clone https://github.com/xiaoxiao1008150/wechat-one.git
 ```
 **注意：需要开启开发环境不校验请求域名以及 TLS 版本**
 ## 部分效果演示
-![](http://g.recordit.co/KxVnC5y4u1.gif)
+![](http://g.recordit.co/PCtF5aGcBX.gif)
+![](http://g.recordit.co/YBncULq56v.gif)
+![](http://g.recordit.co/5pHhpQthEK.gif)
+![](http://g.recordit.co/ScQPtD72Yd.gif)
 
 <!-- ![image](https://github.com/xiaoxiao1008150/vue_movie/raw/master/screenshot/search_people.gif) -->
 

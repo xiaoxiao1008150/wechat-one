@@ -15,7 +15,7 @@ Page({
     needId: true,
     musicTag:false,
     movieTag: false,
-    date: date
+    date: '2017-12-16'
   },
 
   /**
